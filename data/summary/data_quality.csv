@@ -1,0 +1,7 @@
+metric,result
+Cleaned transaction lines,530104
+Missing Customer IDs,132220
+Missing descriptions,0
+Cancelled invoices remaining,0
+Non-positive quantities remaining,0
+Missing UnitPrice values,1

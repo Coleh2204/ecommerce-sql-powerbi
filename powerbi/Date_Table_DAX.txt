@@ -1,0 +1,14 @@
+Date =
+ADDCOLUMNS(
+    CALENDAR(DATE(2010,12,1), DATE(2011,12,9)),
+    "Year", YEAR([Date]),
+    "Month Number", MONTH([Date]),
+    "Month", FORMAT([Date], "MMM"),
+    "Year-Month", FORMAT([Date], "YYYY-MM"),
+    "Quarter", "Q" & FORMAT([Date], "Q")
+)
+
+-- After creation:
+-- 1. Mark Date as the model's Date table.
+-- 2. Relate Date[Date] 1:* to vw_sales_detail[order_date].
+-- 3. Sort Date[Month] by Date[Month Number].

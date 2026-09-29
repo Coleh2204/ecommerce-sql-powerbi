@@ -1,0 +1,78 @@
+-- Create a Measures table in Power BI and add these measures.
+
+Total Revenue =
+SUM('vw_sales_detail'[line_revenue])
+
+Units Sold =
+SUM('vw_sales_detail'[quantity])
+
+Total Orders =
+DISTINCTCOUNT('vw_sales_detail'[invoice_no])
+
+Identified Customers =
+CALCULATE(
+    DISTINCTCOUNT('vw_sales_detail'[customer_id]),
+    'vw_sales_detail'[customer_id] <> BLANK()
+)
+
+Average Order Value =
+DIVIDE([Total Revenue], [Total Orders])
+
+Units per Order =
+DIVIDE([Units Sold], [Total Orders])
+
+Merchandise Revenue =
+CALCULATE(
+    [Total Revenue],
+    'vw_sales_detail'[is_merchandise] = TRUE()
+)
+
+UK Revenue =
+CALCULATE(
+    [Total Revenue],
+    'vw_sales_detail'[country] = "United Kingdom"
+)
+
+UK Revenue Share =
+DIVIDE([UK Revenue], [Total Revenue])
+
+Previous Month Revenue =
+CALCULATE(
+    [Total Revenue],
+    DATEADD('Date'[Date], -1, MONTH)
+)
+
+MoM Revenue Change =
+[Total Revenue] - [Previous Month Revenue]
+
+MoM Revenue Growth % =
+DIVIDE([MoM Revenue Change], [Previous Month Revenue])
+
+Revenue YTD =
+TOTALYTD([Total Revenue], 'Date'[Date])
+
+Customer Revenue =
+CALCULATE(
+    [Total Revenue],
+    ALLEXCEPT('vw_sales_detail', 'vw_sales_detail'[customer_id])
+)
+
+Repeat Customers =
+COUNTROWS(
+    FILTER(
+        FILTER(VALUES('vw_sales_detail'[customer_id]), NOT ISBLANK('vw_sales_detail'[customer_id])),
+        CALCULATE(DISTINCTCOUNT('vw_sales_detail'[invoice_no])) > 1
+    )
+)
+
+Repeat Customer Rate =
+DIVIDE([Repeat Customers], [Identified Customers])
+
+Product Revenue Rank =
+RANKX(
+    ALL('vw_sales_detail'[description]),
+    [Total Revenue],
+    ,
+    DESC,
+    Dense
+)

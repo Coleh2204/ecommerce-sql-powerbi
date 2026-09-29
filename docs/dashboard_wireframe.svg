@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="850" viewBox="0 0 1400 850">
+  <rect width="1400" height="850" fill="#f7f7f7"/>
+  <text x="60" y="65" font-family="Arial" font-size="30" font-weight="700">E-Commerce Sales &amp; Customer Analytics</text>
+  <text x="60" y="95" font-family="Arial" font-size="16">Executive Overview — Power BI layout wireframe</text>
+  <g font-family="Arial">
+    <g><rect x="60" y="130" width="230" height="110" rx="12" fill="white" stroke="#ddd"/><text x="80" y="165" font-size="15">Total Revenue</text><text x="80" y="210" font-size="30" font-weight="700">£10.67M</text></g>
+    <g><rect x="315" y="130" width="230" height="110" rx="12" fill="white" stroke="#ddd"/><text x="335" y="165" font-size="15">Units Sold</text><text x="335" y="210" font-size="30" font-weight="700">5.59M</text></g>
+    <g><rect x="570" y="130" width="230" height="110" rx="12" fill="white" stroke="#ddd"/><text x="590" y="165" font-size="15">Orders</text><text x="590" y="210" font-size="30" font-weight="700">19,960</text></g>
+    <g><rect x="825" y="130" width="230" height="110" rx="12" fill="white" stroke="#ddd"/><text x="845" y="165" font-size="15">Avg. Order Value</text><text x="845" y="210" font-size="30" font-weight="700">£534.40</text></g>
+    <g><rect x="1080" y="130" width="260" height="110" rx="12" fill="white" stroke="#ddd"/><text x="1100" y="165" font-size="15">UK Revenue Share</text><text x="1100" y="210" font-size="30" font-weight="700">84.6%</text></g>
+    <rect x="60" y="275" width="820" height="470" rx="12" fill="white" stroke="#ddd"/>
+    <text x="85" y="315" font-size="20" font-weight="700">Monthly Revenue Trend</text>
+    <polyline points="105,600 160,640 215,690 270,625 325,680 380,610 435,615 490,630 545,615 600,500 655,465 710,370 765,550" fill="none" stroke="#4c78a8" stroke-width="5"/>
+    <line x1="105" y1="700" x2="825" y2="700" stroke="#bbb"/>
+    <text x="105" y="725" font-size="12">Dec 10</text><text x="730" y="725" font-size="12">Dec 11*</text>
+    <text x="100" y="345" font-size="13">Peak full month: Nov 2011 ≈ £1.51M</text>
+    <rect x="910" y="275" width="430" height="470" rx="12" fill="white" stroke="#ddd"/>
+    <text x="935" y="315" font-size="20" font-weight="700">Top Countries by Revenue</text>
+    <text x="935" y="360" font-size="15">United Kingdom</text><rect x="1080" y="345" width="220" height="20" fill="#4c78a8"/>
+    <text x="935" y="405" font-size="15">Netherlands</text><rect x="1080" y="390" width="35" height="20" fill="#4c78a8"/>
+    <text x="935" y="450" font-size="15">EIRE</text><rect x="1080" y="435" width="34" height="20" fill="#4c78a8"/>
+    <text x="935" y="495" font-size="15">Germany</text><rect x="1080" y="480" width="28" height="20" fill="#4c78a8"/>
+    <text x="935" y="540" font-size="15">France</text><rect x="1080" y="525" width="26" height="20" fill="#4c78a8"/>
+    <text x="935" y="600" font-size="14">Insight: UK contributes ~84.6% of revenue.</text>
+    <text x="60" y="800" font-size="13">* Dec 2011 is partial through Dec 9.</text>
+  </g>
+</svg>
